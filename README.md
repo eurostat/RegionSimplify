@@ -1,9 +1,24 @@
 # EuroGen
-Some automated map generalisation processes and software for the production of European geographical datasets
+EuroGen is a set of uilities to simplify geographical data.
 
-## Administrative units generalisation
+## Simplification of administrative units
 
-To do that:
-<show image>
+Quick presentation, with image before/after
 
-Quick start.
+### Quick start
+TODO: with file chooser
+
+### Install
+Java+download/unpack
+
+### Execution
+Simple+command line
+
+### Parameters
+-h
+
+### Comparison
+
+
+### How does it work?
+
