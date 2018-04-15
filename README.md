@@ -13,6 +13,7 @@ Java+download/unpack
 
 ### Execution
 Simple+command line
+input data: SHP format
 
 ### Parameters
 -h
