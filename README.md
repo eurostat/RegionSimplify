@@ -3,9 +3,14 @@ EuroGen is a set of utilities to simplify geographical data.
 
 ## Simplification of administrative units
 
-Quick presentation, with image before/after
+With EuroGen, you can simplify A into B.
+
+<Image A before, B after>
 
 ### Quick start
+
+Download, Unzip. Double click on EuroGen
+
 TODO: with file chooser
 
 ### Install
