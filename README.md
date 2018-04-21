@@ -29,8 +29,11 @@ Input data should be a set of polygonal or multipolygonal features with no overl
 
 TessGen can be executed by double clicking on the execution file, as described in the quick start section. This execution will use default parameters.
 
+To lanch simplifications with special parameters, launch command such as:
+<java -jar TessGen.jar -h>
 
--h
+<table>
+
 
 ### Comparison
 
