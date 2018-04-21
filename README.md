@@ -3,24 +3,27 @@ EuroGen is a set of utilities to simplify geographical data.
 
 ## Simplification of administrative units
 
-With EuroGen, you can simplify A into B.
+Use TessGen utility to run simplifications such as the one from A to B:
 
 <Image A before, B after>
 
 ### Quick start
 
-Download, Unzip. Double click on EuroGen
+Download (link), unzip, double click on TessGen.bat (windows) or TessGen.sh (linux), select your input file, and save the output. Ta-da.
 
 TODO: with file chooser
 
-### Install
-Java+download/unpack
+### Advanced use
 
-### Execution
+#### Install detail
+
+EuroGen
+
+#### Execution
 Simple+command line
 input data: SHP format
 
-### Parameters
+#### Parameters
 -h
 
 ### Comparison
