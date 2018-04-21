@@ -1,6 +1,9 @@
 # EuroGen
 EuroGen is a set of utilities to simplify geographical data.
 
+[I'm an inline-style link](https://www.google.com)
+
+
 ## Simplification of administrative units
 
 Use TessGen utility to run simplifications such as the one from A to B:
@@ -30,13 +33,19 @@ Input data should be a set of polygonal or multipolygonal features with no overl
 TessGen can be executed by double clicking on the execution file, as described in the quick start section. This execution will use default parameters.
 
 To lanch simplifications with special parameters, launch command such as:
-<java -jar TessGen.jar -h>
+`java -jar TessGen.jar ...`
 
-<table>
-
-
-### Comparison
+| -h      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
 
 
 ### How does it work?
 
+<TODO> principles, references
+
+
+### Comparison
+
+TopoJSON simplifier
+MapShaper
