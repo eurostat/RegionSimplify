@@ -1,5 +1,5 @@
 # EuroGen
-EuroGen is a set of uilities to simplify geographical data.
+EuroGen is a set of utilities to simplify geographical data.
 
 ## Simplification of administrative units
 
