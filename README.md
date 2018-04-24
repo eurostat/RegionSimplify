@@ -1,7 +1,7 @@
 # EuroGen
 EuroGen is a set of utilities to simplify geographical data.
 
-[I'm an inline-style link](https://www.google.com)
+[link](https://www.google.com)
 
 
 ## Simplification of administrative units
@@ -35,7 +35,7 @@ TessGen can be executed by double clicking on the execution file, as described i
 To lanch simplifications with special parameters, launch command such as:
 `java -jar TessGen.jar ...`
 
-| -h      | right-aligned | $1600 |
+| -h            | right-aligned | $1600 |
 | col 2 is      | centered      |   $12 |
 | zebra stripes | are neat      |    $1 |
 
