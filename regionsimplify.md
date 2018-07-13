@@ -24,18 +24,14 @@ Use [RegionSimplify](https://github.com/eurostat/EuroGen/blob/master/regionsimpl
 The parameters are described in the help: `java -jar RegionSimplify.jar -h`
 Here they are:
 
-| Parameter | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| Parameter | Description | Default value |
+| ------------- |-------------| -----:|
+| -h | Show the help message |  |
+| -i,--inputFile <file> | Input file (SHP format) | |
+| | | |
 
 
--h                                               Show this help message
- -i,--inputFile <file>                            Input file (SHP format).
- -id <string>                                     Optional. Id property to
-                                                  link the units and the
-                                                  points.
+
  -inb,--roundNb <int>                             Optional. Number of
                                                   iterations of the
                                                   process. Default: 10.
@@ -52,18 +48,8 @@ Here they are:
                                                   50000
 
 
-
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
-
-
-
-
-<TODO make available file chooser>
+<TODO make file chooser>
 <TODO parameter file>
 <TODO Publish topology checker and topology corrector>
 <TODO describe principles>
-<TODO >
+<TODO show comparison with ...>
