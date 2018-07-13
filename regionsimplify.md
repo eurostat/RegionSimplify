@@ -24,32 +24,20 @@ Use [RegionSimplify](https://github.com/eurostat/EuroGen/blob/master/regionsimpl
 The parameters are described in the help: `java -jar RegionSimplify.jar -h`
 Here they are:
 
-| Parameter | Description | Default value |
-| ------------- |-------------| -----:|
-| -h | Show the help message |  |
-| -i,--inputFile <file> | Input file (SHP format) | |
-| | | |
+| Parameter | Required | Description | Default value |
+| ------------- | ------------- |-------------| -----:|
+| -h | | Show the help message |  |
+| -i,--inputFile <file> | * | Input file (SHP format) | |
+| -o,--outputFile <file> | | Output file (SHP format) | out.shp |
+| -s,--scaleDenominator <double> || The scale denominator for the target data | 50000|
+| -inb,--roundNb <int> || Number of iterations of the process. A small value returns a result faster. | 10 |
+| -mcn,--maxCoordinatesNumber <int> || TODO | 1000000 |
+| -omcn,--objMaxCoordinateNumber <int> || TODO | 1000 |
 
 
-
- -inb,--roundNb <int>                             Optional. Number of
-                                                  iterations of the
-                                                  process. Default: 10.
- -ip,--inputPointFile <file>                      Optional. Input file for
-                                                  points (SHP format).
- -mcn,--Optional. maxCoordinatesNumber <int>      Default: 1000000.
- -o,--outputFile <file>                           Optional. Output file
-                                                  (SHP format). Default:
-                                                  'out.shp'.
- -omcn,--Optional. objMaxCoordinateNumber <int>   Default: 1000.
- -s,--scaleDenominator <double>                   Optional. The scale
-                                                  denominator for the
-                                                  target data. Default:
-                                                  50000
-
-
-<TODO make file chooser>
-<TODO parameter file>
+<TODO section on large datasets: explain partitionning + JVM parameters>
+<TODO make file chooser + parameter/config file>
 <TODO Publish topology checker and topology corrector>
 <TODO describe principles>
 <TODO show comparison with ...>
+<TODO explain parameters in the table>
