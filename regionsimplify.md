@@ -32,9 +32,17 @@ The help is displayed with `java -jar RegionSimplify.jar -h` command.
 | -i,--inputFile *file* | * | Input file (SHP format) | |
 | -o,--outputFile *file* | | Output file (SHP format) | out.shp |
 | -s,--scaleDenominator *double* || The scale denominator for the target data | 50000|
-| -inb,--roundNb *int* || Number of iterations of the process. A small value returns a result faster. | 10 |
-| -mcn,--maxCoordinatesNumber *int* || TODO | 1000000 |
-| -omcn,--objMaxCoordinateNumber *int* || TODO | 1000 |
+| -inb,--roundNb *int* || Number of iterations of the process. A small value returns a result faster, while a high value returns better quality. | 10 |
+| -mcn,--maxCoordinatesNumber *int* || The maximum number of vertices of the input dataset. Above this value, the simplification will be applied automatically on a decomposition. See section below. | 1000000 |
+| -omcn,--objMaxCoordinateNumber *int* || The maximum number of vertices of each region dataset. Above this value, the simplification will be applied automatically on a decomposition of the input dataset. See section below. | 1000 |
+
+### Dealing with large datasets
+
+[RegionSimplify](regionsimplify.md) can handle large datasets thanks to an automatic partionning mechanism. The principle is to decompose recursivelly the input dataset if it is too large, apply the simplification to the parts, and finally recompose the results. The partitionning is based on a quadtree structure as illustrated [here](img/gen_eurostat.pdf).
+
+To use [RegionSimplify](regionsimplify.md) on large datasets, you should thus:
+* Increase the memory allocated to the program with *Xmx* and *Xmx* parameters, such as: `java -Xmx12g -Xms4g -jar RegionSimplify.jar -i pathTo/myRegions.shp`
+* Ajust the parameters *-mcn* and *-omcn* described in the table above. Low value mean intensive decomposition but fast simplifications. High values mean little decomposition but potentially time-consuming simplifications.
 
 ## Showcase
 
@@ -44,8 +52,6 @@ The help is displayed with `java -jar RegionSimplify.jar -h` command.
 
 Feel free to [ask support](https://github.com/eurostat/EuroGen/issues/new), fork the project or simply star it (it's always a pleasure). The source code is currently stored as part of [OpenCarto](https://github.com/jgaffuri/OpenCarto) repository.
 
-<TODO section on large datasets explain partitionning JVM parameters>
 <TODO make file chooser parameter config file>
 <TODO Publish topology checker and topology corrector>
 <TODO describe principles> <TODO show comparisons with others>
-<TODO explain parameters in the table>
