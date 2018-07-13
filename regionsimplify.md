@@ -43,7 +43,6 @@ Feel free to [ask support](https://github.com/eurostat/EuroGen/issues/new), fork
 <TODO section on large datasets explain partitionning JVM parameters>
 <TODO make file chooser parameter config file>
 <TODO Publish topology checker and topology corrector>
-<TODO describe principles>
-<TODO show comparisons with others>
+<TODO describe principles> <TODO show comparisons with others>
 <TODO explain parameters in the table>
 <TODO showcase>
