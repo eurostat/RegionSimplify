@@ -7,8 +7,10 @@ TODO: show Image A before, B after on demo dataset
 
 ## Quick start
 
-Download (link), unzip, double click on RegionSimplify.bat (windows) or RegionSimplify.sh (linux), select your input file, and save the output.
+[Download][1], unzip, double click on RegionSimplify.bat (windows) or RegionSimplify.sh (linux), select your input file, and save the output.
 TODO: implement file chooser
+
+[Download][1]
 
 ## Advanced use
 
@@ -35,14 +37,4 @@ To lanch simplifications with special parameters, launch command such as:
 | col 2 is      | centered      |   $12 |
 | zebra stripes | are neat      |    $1 |
 
-
-## How does it work?
-
-<TODO> principles, references
-
-
-## Comparison
-
-<TODO>
-TopoJSON simplifier
-MapShaper
+[1]: https://github.com/eurostat/EuroGen/blob/master/regionsimplify/regionsimplify-1.3.1.zip?raw=true
