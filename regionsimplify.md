@@ -2,12 +2,7 @@
 
 Use [RegionSimplify](regionsimplify.md) to simplify your regions like:
 
-![Before](img/ini_.png) ![After](img/fin_5M_.png)
-
-
-[![Before](img/ini_.png)](img/ini.png)
-
-
+[![Before](img/ini_.png)](img/ini.png?raw=true) [![After](img/fin_5M_.png)](img/fin_5M.png?raw=true)
 
 ## Quick start
 
@@ -45,7 +40,6 @@ The help can be displayed with: `java -jar RegionSimplify.jar -h`
 
 Feel free to [ask support](https://github.com/eurostat/EuroGen/issues/new), fork the project or simply star it (it's always a pleasure). The source code is currently stored as part of [OpenCarto](https://github.com/jgaffuri/OpenCarto) repository.
 
-<TODO images large>
 <TODO section on large datasets explain partitionning JVM parameters>
 <TODO make file chooser parameter config file>
 <TODO Publish topology checker and topology corrector>
