@@ -18,10 +18,9 @@ Use [RegionSimplify](https://github.com/eurostat/EuroGen/blob/master/regionsimpl
 * Only [SHP format](https://en.wikipedia.org/wiki/Shapefile) is currently supported. For any other format, use a converter such as [GDAL](http://www.gdal.org/) or [QGIS](https://www.qgis.org/).
 * The projection of your input file must be specified. Both geographical and cartographic projections are supported.
 
-### Parameters
+### Input parameters
 
-The parameters are described in the help: `java -jar RegionSimplify.jar -h`
-Here they are:
+The help can be displayed with: `java -jar RegionSimplify.jar -h`
 
 | Parameter | Required | Description | Default value |
 | ------------- | ------------- |-------------| -----:|
