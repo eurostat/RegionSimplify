@@ -1,13 +1,14 @@
 # Region Simplify
 
-Use RegionSimplify to simplify like:
+Use RegionSimplify to simplify your regions like:
 
 ![Before](https://github.com/eurostat/EuroGen/raw/master/img/ini_.png) ![After](https://github.com/eurostat/EuroGen/raw/master/img/fin_5M_.png)
 
 ## Quick start
 
-[Download][1], unzip somewhere, double click on RegionSimplify.bat (windows) or RegionSimplify.sh (linux), select your input file, and save the output.
-TODO: implement file chooser
+1. [Download][1]
+2. Unzip somewhere
+3. Run command 'java -jar RegionSimplify.jar -i pathTo/myRegions.shp' where 'pathTo/myRegions.shp' is the path to the SHP file containing your regions. You can alternativelly edit and execute 'RegionSimplify.bat' ('RegionSimplify.sh' for Linux users).
 
 ## Advanced use
 
