@@ -6,23 +6,22 @@ Use RegionSimplify to simplify your regions like:
 
 ## Quick start
 
-1. [Download][1]
-2. Unzip somewhere
-3. Run command 'java -jar RegionSimplify.jar -i pathTo/myRegions.shp' where 'pathTo/myRegions.shp' is the path to the SHP file containing your regions. You can alternativelly edit and execute 'RegionSimplify.bat' ('RegionSimplify.sh' for Linux users).
+1. Java 1.7 or higher is required. If not already installed, get it from [here](https://www.java.com/)
+2. Download [regionsimplify.zip](https://github.com/eurostat/EuroGen/blob/master/regionsimplify/regionsimplify-1.3.1.zip?raw=true)
+3. Unzip somewhere
+4. Run: `java -jar RegionSimplify.jar -i pathTo/myRegions.shp` where `pathTo/myRegions.shp` is the path to the SHP file containing your regions. You can alternativelly edit and execute *RegionSimplify.bat* (*RegionSimplify.sh* for Linux users). The final result appears in a *out.shp* file or in a file specified via the `-o` option.
+
+<TODO> make available file chooser
+<TODO> parameter file
 
 ## Advanced use
-
-### Install detail
-
-RegionSimplify requires Java 1.7 or higher to be installed.
-TODO: utility to check java is installed?
-You can get Java from: (link)
 
 ### Input data
 
 Input data should be a set of polygonal or multipolygonal features with no overlap between them. To check the integrity of the input file, you can use <TODO>.
 <TODO> can be used to fix the input file.
 Currently, only SHP files are supported.
+Projection
 
 ### Execution and parameters
 
@@ -35,4 +34,4 @@ To lanch simplifications with special parameters, launch command such as:
 | col 2 is      | centered      |   $12 |
 | zebra stripes | are neat      |    $1 |
 
-[1]: https://github.com/eurostat/EuroGen/blob/master/regionsimplify/regionsimplify-1.3.1.zip?raw=true
+<TODO describe principles>
