@@ -6,10 +6,9 @@ Use [RegionSimplify](https://github.com/eurostat/EuroGen/blob/master/regionsimpl
 
 ## Quick start
 
-1. Java 1.7 or higher is required. If not already installed, get it from [here](https://www.java.com/)
-2. Download [regionsimplify.zip](https://github.com/eurostat/EuroGen/blob/master/regionsimplify/regionsimplify-1.3.1.zip?raw=true)
-3. Unzip somewhere.
-4. Run: `java -jar RegionSimplify.jar -i pathTo/myRegions.shp` where `pathTo/myRegions.shp` is the path to the input regions. You can alternativelly edit and execute *RegionSimplify.bat* (*RegionSimplify.sh* for Linux users). The final result appears in a *out.shp* file or in a file specified via the `-o` option.
+1. Java 1.7 or higher is required (check it with `java --version` command). If not already installed, get it from [here](https://www.java.com/).
+2. Download [regionsimplify.zip](https://github.com/eurostat/EuroGen/blob/master/regionsimplify/regionsimplify-1.3.1.zip?raw=true) and unzip somewhere.
+3. Run: `java -jar RegionSimplify.jar -i pathTo/myRegions.shp` where `pathTo/myRegions.shp` is the path to the input regions. You can alternativelly edit and execute *RegionSimplify.bat* (*RegionSimplify.sh* for Linux users). The final result appears in a *out.shp* file or in a file specified via the `-o` option.
 
 ## Advanced use
 
