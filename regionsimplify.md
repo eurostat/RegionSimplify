@@ -1,6 +1,6 @@
 # Region Simplify
 
-Use [RegionSimplify](regionsimplify.md) to simplify your regions like that:
+Use [RegionSimplify](regionsimplify.md) to simplify your regions like [that](img/ex.gif?raw=true):
 
 [![Before](img/ini_.png)](img/ex.gif?raw=true) [![After](img/fin_5M_.png)](img/ex.gif?raw=true)
 
@@ -13,7 +13,7 @@ Use [RegionSimplify](regionsimplify.md) to simplify your regions like that:
 
 ### Requirements
 
-Java 1.7 or higher is required. The java version installed, if any, can be found with `java --version` command. Recent versions of Java can be retrieved from [here](https://www.java.com/).
+Java 1.7 or higher is required. The java version installed, if any, can be found with `java --version` command. Recent versions of Java can be installed from [here](https://www.java.com/).
 
 ### Input data
 
@@ -24,7 +24,7 @@ Java 1.7 or higher is required. The java version installed, if any, can be found
 
 ### Input parameters
 
-The help can be displayed with: `java -jar RegionSimplify.jar -h`
+The help is displayed with `java -jar RegionSimplify.jar -h` command.
 
 | Parameter | Required | Description | Default value |
 | ------------- | ------------- |-------------| ------|
@@ -36,7 +36,7 @@ The help can be displayed with: `java -jar RegionSimplify.jar -h`
 | -mcn,--maxCoordinatesNumber *int* || TODO | 1000000 |
 | -omcn,--objMaxCoordinateNumber *int* || TODO | 1000 |
 
-### Showcase
+## Showcase
 
 [RegionSimplify](regionsimplify.md) is used at [Eurostat-GISCO](http://ec.europa.eu/eurostat/web/gisco) for the production of [statistical and administrative unit datasets](http://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units) at different scales, such as [the NUTS dataset](http://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units/nuts). For more detail, see [here](img/gen_eurostat.pdf).
 
