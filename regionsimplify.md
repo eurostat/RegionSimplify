@@ -29,12 +29,12 @@ The help is displayed with `java -jar RegionSimplify.jar -h` command.
 | Parameter | Required | Description | Default value |
 | ------------- | ------------- |-------------| ------|
 | -h | | Show the help message |  |
-| -i,--inputFile *file* | * | Input file (SHP format) | |
-| -o,--outputFile *file* | | Output file (SHP format) | out.shp |
-| -s,--scaleDenominator *double* || The scale denominator for the target data | 50000|
-| -inb,--roundNb *int* || Number of iterations of the process. A small value returns a result faster, while a high value returns better quality. | 10 |
-| -mcn,--maxCoordinatesNumber *int* || The maximum number of vertices of the input dataset. Above this value, the simplification will be applied automatically on a decomposition. See section below. | 1000000 |
-| -omcn,--objMaxCoordinateNumber *int* || The maximum number of vertices of each region dataset. Above this value, the simplification will be applied automatically on a decomposition of the input dataset. See section below. | 1000 |
+| -i, --inputFile *file* | * | Input file (SHP format) | |
+| -o, --outputFile *file* | | Output file (SHP format) | out.shp |
+| -s, --scaleDenominator *double* || The scale denominator for the target data. For a simplification to scale 1:1'000'000, the value should be 1000000. For a correspondance between zoom level and scale, see [here](https://gis.stackexchange.com/questions/7430/what-ratio-scales-do-google-maps-zoom-levels-correspond-to). | 50000|
+| -inb, --roundNb *int* || Number of iterations of the process. A small value returns a result faster, while a high value returns better quality result. | 10 |
+| -mcn, --maxCoordinatesNumber *int* || The maximum number of vertices of the input dataset. Above this value, the simplification will be applied automatically on a decomposition. See section below for more info. | 1000000 |
+| -omcn, --objMaxCoordinateNumber *int* || The maximum number of vertices of each region dataset. Above this value, the simplification will be applied automatically on a decomposition of the input dataset. See section below for more info. | 1000 |
 
 ### Dealing with large datasets
 
@@ -46,7 +46,7 @@ To use [RegionSimplify](regionsimplify.md) on large datasets, you should thus:
 
 ## Showcase
 
-[RegionSimplify](regionsimplify.md) is used at [Eurostat-GISCO](http://ec.europa.eu/eurostat/web/gisco) for the production of [statistical and administrative unit datasets](http://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units) at different scales, such as [the NUTS dataset](http://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units/nuts). For more detail, see [here](img/gen_eurostat.pdf).
+[RegionSimplify](regionsimplify.md) is used at [Eurostat-GISCO](http://ec.europa.eu/eurostat/web/gisco) for the production of [statistical and administrative unit datasets](http://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units) at different scales, such as [the NUTS dataset](http://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units/nuts). For more information, see [here](img/gen_eurostat.pdf).
 
 ## Support and contribution
 
