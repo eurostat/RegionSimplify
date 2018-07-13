@@ -13,7 +13,7 @@ Use [RegionSimplify](regionsimplify.md) to simplify your regions like [that](img
 
 ### Requirements
 
-Java 1.7 or higher is required. The java version installed, if any, can be found with `java --version` command. Recent versions of Java can be installed from [here](https://www.java.com/).
+Java 1.8 or higher is required. The java version installed, if any, can be found with `java --version` command. Recent versions of Java can be installed from [here](https://www.java.com/).
 
 ### Input data
 
