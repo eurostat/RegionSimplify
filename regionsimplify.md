@@ -35,9 +35,9 @@ Here they are:
 | -omcn,--objMaxCoordinateNumber <int> || TODO | 1000 |
 
 
-<TODO section on large datasets: explain partitionning + JVM parameters>
-<TODO make file chooser + parameter/config file>
+<TODO section on large datasets explain partitionning JVM parameters>
+<TODO make file chooser parameter config file>
 <TODO Publish topology checker and topology corrector>
 <TODO describe principles>
-<TODO show comparison with ...>
+<TODO show comparisons with others>
 <TODO explain parameters in the table>
