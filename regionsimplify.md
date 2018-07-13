@@ -27,12 +27,12 @@ Here they are:
 | Parameter | Required | Description | Default value |
 | ------------- | ------------- |-------------| -----:|
 | -h | | Show the help message |  |
-| -i,--inputFile <file> | * | Input file (SHP format) | |
-| -o,--outputFile <file> | | Output file (SHP format) | out.shp |
-| -s,--scaleDenominator <double> || The scale denominator for the target data | 50000|
-| -inb,--roundNb <int> || Number of iterations of the process. A small value returns a result faster. | 10 |
-| -mcn,--maxCoordinatesNumber <int> || TODO | 1000000 |
-| -omcn,--objMaxCoordinateNumber <int> || TODO | 1000 |
+| -i,--inputFile *file* | * | Input file (SHP format) | |
+| -o,--outputFile *file* | | Output file (SHP format) | out.shp |
+| -s,--scaleDenominator *double* || The scale denominator for the target data | 50000|
+| -inb,--roundNb *int* || Number of iterations of the process. A small value returns a result faster. | 10 |
+| -mcn,--maxCoordinatesNumber *int* || TODO | 1000000 |
+| -omcn,--objMaxCoordinateNumber *int* || TODO | 1000 |
 
 
 <TODO section on large datasets explain partitionning JVM parameters>
