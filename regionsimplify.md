@@ -1,16 +1,12 @@
 # Region Simplify
 
-Use RegionSimplify utility to run simplifications such as the one from A to B:
-
-TODO: make demo dataset
-TODO: show Image A before, B after on demo dataset
+Use RegionSimplify to simplify like:
+![Before](https://github.com/eurostat/EuroGen/raw/master/img/ini_.png) ![After](https://github.com/eurostat/EuroGen/raw/master/img/fin_5M_.png)
 
 ## Quick start
 
-[Download][1], unzip, double click on RegionSimplify.bat (windows) or RegionSimplify.sh (linux), select your input file, and save the output.
+[Download][1], unzip somewhere, double click on RegionSimplify.bat (windows) or RegionSimplify.sh (linux), select your input file, and save the output.
 TODO: implement file chooser
-
-[Download][1]
 
 ## Advanced use
 
