@@ -51,7 +51,7 @@ To use [RegionSimplify](README.md) on large datasets, you should thus:
 ## Comparison with other simplification tools
 
 Here are few comparison examples with [MapShaper](http://mapshaper.org/):
-* [1:1M simplification](resources/comp/ms_1M.gif?raw=true)
+* [1:1M simplification](resources/comp/ms_5M.gif?raw=true)
 * [1:10M simplification](resources/comp/ms_10M.gif?raw=true)
 
 ## Support and contribution
