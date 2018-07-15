@@ -48,6 +48,12 @@ To use [RegionSimplify](README.md) on large datasets, you should thus:
 
 [RegionSimplify](README.md) is used at [Eurostat-GISCO](http://ec.europa.eu/eurostat/web/gisco) for the production of [statistical and administrative unit datasets](http://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units) at different scales, such as [the NUTS dataset](http://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units/nuts). For more information, see [here](resources/gen_eurostat.pdf).
 
+## Comparison with other simplification tools
+
+Here are few comparison examples with [MapShaper](http://mapshaper.org/):
+* [1:1M simplification](resources/comp/ms_1M.gif)
+* [1:10M simplification](resources/comp/ms_10M.gif)
+
 ## Support and contribution
 
 Feel free to [ask support](https://github.com/eurostat/EuroGen/issues/new), fork the project or simply star it (it's always a pleasure). The source code is currently stored as part of [OpenCarto](https://github.com/jgaffuri/OpenCarto) repository. It is mainly based on [GeoTools](http://www.geotools.org/) and [JTS Topology Suite](https://locationtech.github.io/jts/).
