@@ -54,8 +54,6 @@ Here are few comparison examples with [MapShaper](http://mapshaper.org/):
 * [1:1M simplification](resources/comp/ms_1M.gif?raw=true)
 * [1:10M simplification](resources/comp/ms_10M.gif?raw=true)
 
-resources/ex_lbl.gif?raw=true
-
 ## Support and contribution
 
 Feel free to [ask support](https://github.com/eurostat/EuroGen/issues/new), fork the project or simply star it (it's always a pleasure). The source code is currently stored as part of [OpenCarto](https://github.com/jgaffuri/OpenCarto) repository. It is mainly based on [GeoTools](http://www.geotools.org/) and [JTS Topology Suite](https://locationtech.github.io/jts/).
