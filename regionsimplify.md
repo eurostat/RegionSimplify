@@ -2,7 +2,7 @@
 
 Use [RegionSimplify](regionsimplify.md) to simplify your regions like [that](img/ex_lbl.gif?raw=true):
 
-[![Before](img/ini_.png)](img/ex.gif?raw=true) [![After](img/fin_5M_.png)](img/ex_lbl.gif?raw=true)
+[![Before](img/ini_.png)](img/ex_lbl.gif?raw=true) [![After](img/fin_5M_.png)](img/ex_lbl.gif?raw=true)
 
 ## Quick start
 
