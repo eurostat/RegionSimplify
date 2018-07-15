@@ -1,6 +1,6 @@
 # Region Simplify
 
-Use [RegionSimplify](REASDME.md) to simplify your regions like [that](resources/ex_lbl.gif?raw=true):
+Use [RegionSimplify](README.md) to simplify your regions like [that](resources/ex_lbl.gif?raw=true):
 
 [![Before](resources/ini_.png)](resources/ex_lbl.gif?raw=true) [![After](resources/fin_5M_.png)](resources/ex_lbl.gif?raw=true)
 
@@ -38,15 +38,15 @@ The help is displayed with `java -jar RegionSimplify.jar -h` command.
 
 ### Dealing with large datasets
 
-[RegionSimplify](REASDME.md) can handle large datasets thanks to an automatic partionning mechanism. The principle is to decompose recursivelly the input dataset if it is too large, apply the simplification to the parts, and finally recompose the results. The partitionning is based on a quadtree structure as illustrated [here](resources/gen_eurostat.pdf).
+[RegionSimplify](README.md) can handle large datasets thanks to an automatic partionning mechanism. The principle is to decompose recursivelly the input dataset if it is too large, apply the simplification to the parts, and finally recompose the results. The partitionning is based on a quadtree structure as illustrated [here](resources/gen_eurostat.pdf).
 
-To use [RegionSimplify](REASDME.md) on large datasets, you should thus:
+To use [RegionSimplify](README.md) on large datasets, you should thus:
 * Increase the memory allocated to the program with *Xmx* and *Xmx* parameters, such as: `java -Xmx12g -Xms4g -jar RegionSimplify.jar -i pathTo/myRegions.shp`
 * Ajust the parameters *-mcn* and *-omcn* described in the table above. Low value mean intensive decomposition but fast simplifications. High values mean little decomposition but potentially time-consuming simplifications.
 
 ## Showcase
 
-[RegionSimplify](REASDME.md) is used at [Eurostat-GISCO](http://ec.europa.eu/eurostat/web/gisco) for the production of [statistical and administrative unit datasets](http://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units) at different scales, such as [the NUTS dataset](http://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units/nuts). For more information, see [here](resources/gen_eurostat.pdf).
+[RegionSimplify](README.md) is used at [Eurostat-GISCO](http://ec.europa.eu/eurostat/web/gisco) for the production of [statistical and administrative unit datasets](http://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units) at different scales, such as [the NUTS dataset](http://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units/nuts). For more information, see [here](resources/gen_eurostat.pdf).
 
 ## Support and contribution
 
