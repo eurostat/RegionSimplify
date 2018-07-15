@@ -52,6 +52,7 @@ To use [RegionSimplify](README.md) on large datasets, you should thus:
 
 Feel free to [ask support](https://github.com/eurostat/EuroGen/issues/new), fork the project or simply star it (it's always a pleasure). The source code is currently stored as part of [OpenCarto](https://github.com/jgaffuri/OpenCarto) repository. It is mainly based on [GeoTools](http://www.geotools.org/) and [JTS Topology Suite](https://locationtech.github.io/jts/).
 
-<TODO describe principles. Start with transformation algorithms. Describe engine quickly.> <TODO show comparisons with others>
+<TODO describe principles. Start with transformation algorithms. Describe engine quickly.>
+<TODO show comparisons with others. RS can handle intersection conflicts. preserve islands. ammalgamation. preserve all units>
 <TODO make file chooser parameter config file>
 <TODO Publish topology checker and topology corrector>
