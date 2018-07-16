@@ -6,7 +6,7 @@ Use [RegionSimplify](README.md) to simplify your regions like [that](resources/e
 
 ## Quick start
 
-1. Download [regionsimplify.zip](download/regionsimplify-1.3.1.zip?raw=true) and unzip somewhere.
+1. Download [regionsimplify.zip](releases/regionsimplify-1.3.1.zip?raw=true) and unzip somewhere.
 2. Run: `java -jar RegionSimplify.jar -i pathTo/myRegions.shp` where `pathTo/myRegions.shp` is the path to the input regions. You can alternativelly edit and execute *RegionSimplify.bat* (or *RegionSimplify.sh* for Linux users).
 
 ## Usage
