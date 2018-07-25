@@ -44,7 +44,7 @@ To use [RegionSimplify](README.md) on large datasets, you should thus:
 * Increase the memory allocated to the program with *Xmx* and *Xmx* parameters, such as: `java -Xmx12g -Xms4g -jar RegionSimplify.jar -i pathTo/myRegions.shp`
 * Ajust the parameters *-mcn* and *-omcn* described in the table above. Low value mean intensive decomposition but fast simplifications. High values mean little decomposition but potentially time-consuming simplifications.
 
-[![Partitionning](resources/parti_small.png)](resources/parti.gif?raw=true)
+[![Partitionning](resources/parti_small.png)](resources/parti.png?raw=true)
 
 ## Showcase
 
