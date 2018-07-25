@@ -19,7 +19,7 @@ Java 1.8 or higher is required. The java version installed, if any, can be found
 
 * Input data must be a set of polygonal or multipolygonal features with no overlap between them.
 * Only [SHP format](https://en.wikipedia.org/wiki/Shapefile) is currently supported. For any other format, use a converter such as [GDAL](http://www.gdal.org/) or [QGIS](https://www.qgis.org/).
-* The projection of your input file must be specified. Both geographical and cartographic projections are supported.
+* The projection of the input file must be specified. Both geographical and cartographic projections are supported.
 * Some valid test datasets are provided in *test_data* folder.
 
 ### Input parameters
