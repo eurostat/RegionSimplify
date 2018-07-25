@@ -60,7 +60,7 @@ Here are few comparison examples with [MapShaper](http://mapshaper.org/):
 
 Feel free to [ask support](https://github.com/eurostat/EuroGen/issues/new), fork the project or simply star it (it's always a pleasure). The source code is currently stored as part of [OpenCarto](https://github.com/jgaffuri/OpenCarto) repository. It is mainly based on [GeoTools](http://www.geotools.org/) and [JTS Topology Suite](https://locationtech.github.io/jts/).
 
-<TODO describe principles. Start with transformation algorithms. Describe engine quickly.>
-<TODO show comparisons with others. RS can handle intersection conflicts. preserve islands. ammalgamation. preserve all units>
+<TODO describe principles. Start with list of transformation algorithms. Describe engine quickly.>
+<TODO show comparisons with others (TopoJSON Simplify: https://github.com/topojson/topojson-simplify, ArcGIS model builder, with generalisation algorithms (such as Generalize or Integrate), PostGIS simplification algorithms: http://postgis.net/docs/manual-2.2/ST_Simplify.html and http://postgis.net/docs/manual-2.2/ST_SimplifyPreserveTopology.html, GDAL simplification tool: See parameter -simplify, http://www.gdal.org/ogr2ogr.html) . RS can handle intersection conflicts. preserve islands. ammalgamation. preserve all units>
 <TODO make file chooser parameter config file>
 <TODO Publish topology checker and topology corrector>
