@@ -14,8 +14,14 @@ public class TesselationGeneralisationMainTest extends TestCase {
 	}
 
 	public void test() {
-		//for(String gt : new String[] {"surf","lin","pt"})
-			//GeoDiffJarMain.main(new String[] {"-ini", "src/test/resources/ini_"+gt+".gpkg", "-fin", "src/test/resources/fin_"+gt+".gpkg", "-o", "target/testout/test_"+gt+"/"});
+		for(String s : new String[] {"5","10"})
+			for(String inFormat : new String[] {"gpkg","shp"})
+				for(String outFormat : new String[] {"gpkg","shp","geojson"})
+					for(String ds : new String[] {"bangladesh", "chile", "china_mainland", "indonesia", "panama", "philippines"})
+						TesselationGeneralisationMain.main(new String[] {
+								"-i", "src/test/resources/"+ds+"."+inFormat,
+								"-o", "target/testout/"+ds+"_"+s+"_"+inFormat+"."+outFormat,
+								"-s", s+"000000"});
 	}
 
 }
