@@ -17,7 +17,7 @@ import org.apache.commons.cli.ParseException;
 import org.locationtech.jts.geom.Point;
 
 import eu.europa.ec.eurostat.jgiscotools.feature.Feature;
-import eu.europa.ec.eurostat.jgiscotools.io.SHPUtil;
+import eu.europa.ec.eurostat.jgiscotools.io.GeoData;
 import eu.europa.ec.eurostat.jgiscotools.tesselationGeneralisation.TesselationGeneralisation;
 import eu.europa.ec.eurostat.jgiscotools.util.ProjectionUtil.CRSType;
 
@@ -30,11 +30,11 @@ public class TesselationGeneralisationMain {
 	public static void main(String[] args) {
 
 		Options options = new Options();
-		options.addOption(Option.builder("i").longOpt("inputFile").desc("Input file (SHP format).")
+		options.addOption(Option.builder("i").longOpt("inputFile").desc("Input file. The supported formats are GeoPackage (*.gpkg extension), SHP (*.shp extension) and GeoJSON (*.geojson extension).")
 				.hasArg().argName("file").build());
-		options.addOption(Option.builder("o").longOpt("outputFile").desc("Optional. Output file (SHP format). Default: 'out.shp'.")
+		options.addOption(Option.builder("o").longOpt("outputFile").desc("Optional. Output file (format: GPKG, GeoJSON or SHP). Default: 'out.gpkg'.")
 				.hasArg().argName("file").build());
-		options.addOption(Option.builder("ip").longOpt("inputPointFile").desc("Optional. Input file for points (SHP format).")
+		options.addOption(Option.builder("ip").longOpt("inputPointFile").desc("Optional. Input file for points (format: GPKG, GeoJSON or SHP).")
 				.hasArg().argName("file").build());
 		options.addOption(Option.builder("id").desc("Optional. Id property to link the units and the points.")
 				.hasArg().argName("string").build());
@@ -70,7 +70,7 @@ public class TesselationGeneralisationMain {
 			return;
 		}
 		String outFile = cmd.getOptionValue("o");
-		if(outFile == null) outFile = Paths.get("").toAbsolutePath().toString()+"/out.shp";
+		if(outFile == null) outFile = Paths.get("").toAbsolutePath().toString() + "/out.gpkg";
 		String inPtFile = cmd.getOptionValue("ip");
 		String idProp = cmd.getOptionValue("id");
 		double scaleDenominator = cmd.getOptionValue("s") != null? Integer.parseInt(cmd.getOptionValue("s")) : 50000;
@@ -80,7 +80,7 @@ public class TesselationGeneralisationMain {
 
 
 		System.out.println("Load data from "+inFile);
-		Collection<Feature> units = SHPUtil.getFeatures(inFile);
+		Collection<Feature> units = GeoData.getFeatures(inFile);
 		if(idProp != null && !"".equals(idProp)) for(Feature unit : units) unit.setID( unit.getAttribute(idProp).toString() );
 
 		HashMap<String, Collection<Point>> points = null;
@@ -90,11 +90,11 @@ public class TesselationGeneralisationMain {
 		}
 
 		System.out.println("Launch generalisation");
-		CRSType crsType = SHPUtil.getCRSType(inFile);
+		CRSType crsType = GeoData.getCRSType(inFile);
 		units = TesselationGeneralisation.runGeneralisation(units, points, crsType, scaleDenominator, roundNb, maxCoordinatesNumber, objMaxCoordinateNumber);
 
 		System.out.println("Save output to "+outFile);
-		SHPUtil.saveSHP(units, outFile, SHPUtil.getCRS(inFile));
+		GeoData.save(units, outFile, GeoData.getCRS(inFile));
 
 		System.out.println("End");
 	}

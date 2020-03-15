@@ -7,7 +7,7 @@ Use [RegionSimplify](README.md) to simplify your regions like [that](resources/e
 ## Quick start
 
 1. Download [regionsimplify.zip](releases/regionsimplify-1.3.1.zip?raw=true) and unzip somewhere.
-2. Run: `java -jar RegionSimplify.jar -i pathTo/myRegions.shp` where `pathTo/myRegions.shp` is the path to the input regions. You can alternativelly edit and execute *RegionSimplify.bat* (or *RegionSimplify.sh* for Linux users).
+2. Run: `java -jar RegionSimplify.jar -i pathTo/myRegions.gpkg` where `pathTo/myRegions.gpkg` is the path to the input regions. You can alternativelly edit and execute *RegionSimplify.bat* (or *RegionSimplify.sh* for Linux users).
 
 ## Usage
 
@@ -18,7 +18,7 @@ Java 1.8 or higher is required. The java version installed, if any, can be found
 ### Input data
 
 * Input data must be a set of polygonal or multipolygonal features with no overlap between them.
-* Only [SHP format](https://en.wikipedia.org/wiki/Shapefile) is currently supported. For any other format, use a converter such as [GDAL](http://www.gdal.org/) or [QGIS](https://www.qgis.org/).
+* [GeoPackage](https://www.geopackage.org/), [Shapefile](https://en.wikipedia.org/wiki/Shapefile) and [GeoJSON](https://geojson.org/) formats are supported. For other formats, use a converter such as [GDAL](http://www.gdal.org/) or [QGIS](https://www.qgis.org/).
 * The projection of the input file must be specified. Both geographical and cartographic projections are supported.
 * Some valid test datasets are provided in *test_data* folder.
 
@@ -29,8 +29,8 @@ The help is displayed with `java -jar RegionSimplify.jar -h` command.
 | Parameter | Required | Description | Default value |
 | ------------- | ------------- |-------------| ------|
 | -h | | Show the help message |  |
-| -i, --inputFile *file* | * | Input file (SHP format) | |
-| -o, --outputFile *file* | | Output file (SHP format) | out.shp |
+| -i, --inputFile *file* | * | Input file. The supported formats are GeoPackage (*.gpkg extension), SHP (*.shp extension) and GeoJSON (*.geojson extension). | |
+| -o, --outputFile *file* | | Output file (format: GPKG, GeoJSON or SHP). | out.gpkg |
 | -s, --scaleDenominator *double* || The scale denominator for the target data. For a simplification to scale 1:1'000'000, the value should be 1000000. For a correspondance between zoom level and scale, see [here](https://gis.stackexchange.com/questions/7430/what-ratio-scales-do-google-maps-zoom-levels-correspond-to). | 50000|
 | -inb, --roundNb *int* || Number of iterations of the process. A small value returns a result faster, while a high value returns better quality result. | 10 |
 | -mcn, --maxCoordinatesNumber *int* || The maximum number of vertices of the input dataset. Above this value, the simplification will be applied automatically on a decomposition. See section below for more info. | 1000000 |
