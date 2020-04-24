@@ -4,9 +4,11 @@ Use [RegionSimplify](README.md) to simplify your regions like [that](resources/e
 
 [![Before](resources/ini_.png)](resources/ex_lbl.gif?raw=true) [![After](resources/fin_5M_.png)](resources/ex_lbl.gif?raw=true)
 
+**NEW:** Multi processor computation + support for SHP, GeoPackage and GeoJSON formats.
+
 ## Quick start
 
-1. Download [regionsimplify.zip](releases/regionsimplify-1.3.1.zip?raw=true) and unzip somewhere.
+1. Download [regionsimplify.zip](releases/regionsimplify-1.4.0.zip?raw=true) and unzip somewhere.
 2. Run: `java -jar RegionSimplify.jar -i pathTo/myRegions.gpkg` where `pathTo/myRegions.gpkg` is the path to the input regions. You can alternativelly edit and execute *RegionSimplify.bat* (or *RegionSimplify.sh* for Linux users).
 
 ## Usage
@@ -39,13 +41,14 @@ The help is displayed with `java -jar RegionSimplify.jar -h` command.
 
 ### Dealing with large datasets
 
-[RegionSimplify](README.md) can handle large datasets thanks to an automatic partionning mechanism. The principle is to decompose recursivelly the input dataset if it is too large, apply the simplification to the parts, and finally recompose the results. The partitionning is based on a quadtree structure as illustrated on the image below.
+[RegionSimplify](README.md) can handle large datasets thanks to an automatic partionning mechanism. The principle is to decompose recursivelly the input dataset if it is too large, apply the simplification to the parts (possibly in parallel), and finally recompose the results. The partitionning is based on a quadtree structure as illustrated on the image below.
 
 [![Partitionning](resources/parti_small.png)](resources/parti.png?raw=true)
 
 To use [RegionSimplify](README.md) on large datasets, you should thus:
 * Increase the memory allocated to the program with *Xmx* and *Xms* parameters, such as: `java -Xmx12g -Xms4g -jar RegionSimplify.jar -i pathTo/myRegions.shp`
 * Ajust the parameters *-mcn* and *-omcn* described in the table above. Low value mean intensive decomposition but fast simplifications. High values mean little decomposition but potentially time-consuming simplifications.
+* Use parallel computation, for multi processor machine. For that, ensure the parameter *-p* is set to *1* (which is the case by default).
 
 ## Showcase
 
