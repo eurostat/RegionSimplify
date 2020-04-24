@@ -13,7 +13,7 @@ Use [RegionSimplify](README.md) to simplify your regions like [that](resources/e
 
 ### Requirements
 
-Java 1.8 or higher is required. The java version installed, if any, can be found with `java --version` command. Recent versions of Java can be installed from [here](https://www.java.com/).
+Java 1.9 or higher is required. The java version installed, if any, can be found with `java --version` command. Recent versions of Java can be installed from [here](https://www.java.com/).
 
 ### Input data
 
@@ -32,6 +32,7 @@ The help is displayed with `java -jar RegionSimplify.jar -h` command.
 | -i, --inputFile *file* | * | Input file. The supported formats are GeoPackage (*.gpkg extension), SHP (*.shp extension) and GeoJSON (*.geojson extension). | |
 | -o, --outputFile *file* | | Output file (format: GPKG, GeoJSON or SHP). | out.gpkg |
 | -s, --scaleDenominator *double* || The scale denominator for the target data. For a simplification to scale 1:1'000'000, the value should be 1000000. For a correspondance between zoom level and scale, see [here](https://gis.stackexchange.com/questions/7430/what-ratio-scales-do-google-maps-zoom-levels-correspond-to). | 50000|
+| -p, --parallel *int* || Set to 1 to use multiple processors in parallel. Set to 0 otherwise. | 1 |
 | -inb, --roundNb *int* || Number of iterations of the process. A small value returns a result faster, while a high value returns better quality result. | 10 |
 | -mcn, --maxCoordinatesNumber *int* || The maximum number of vertices of the input dataset. Above this value, the simplification will be applied automatically on a decomposition. See section below for more info. | 1000000 |
 | -omcn, --objMaxCoordinateNumber *int* || The maximum number of vertices of each region dataset. Above this value, the simplification will be applied automatically on a decomposition of the input dataset. See section below for more info. | 1000 |

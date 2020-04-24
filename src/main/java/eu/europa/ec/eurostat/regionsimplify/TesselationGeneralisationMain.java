@@ -40,6 +40,8 @@ public class TesselationGeneralisationMain {
 				.hasArg().argName("string").build());
 		options.addOption(Option.builder("s").longOpt("scaleDenominator").desc("Optional. The scale denominator for the target data. Default: 50000")
 				.hasArg().argName("double").build());
+		options.addOption(Option.builder("p").longOpt("parallel").desc("Optional. Set to 1 to use multiple processors in parallel. Set to 0 otherwise. Default: 1.")
+				.hasArg().argName("int").build());
 		options.addOption(Option.builder("inb").longOpt("roundNb").desc("Optional. Number of iterations of the process. Default: 10.")
 				.hasArg().argName("int").build());
 		options.addOption(Option.builder("mcn").longOpt("Optional. maxCoordinatesNumber").desc("Default: 1000000.")
@@ -74,6 +76,8 @@ public class TesselationGeneralisationMain {
 		String inPtFile = cmd.getOptionValue("ip");
 		String idProp = cmd.getOptionValue("id");
 		double scaleDenominator = cmd.getOptionValue("s") != null? Integer.parseInt(cmd.getOptionValue("s")) : 50000;
+		String parallel_ = cmd.getOptionValue("p");
+		boolean parallel = (parallel_ == null || !parallel_.equals("0"));
 		int roundNb = cmd.getOptionValue("inb") != null? Integer.parseInt(cmd.getOptionValue("inb")) : 10;
 		int maxCoordinatesNumber = cmd.getOptionValue("mcn") != null? Integer.parseInt(cmd.getOptionValue("mcn")) : 1000000;
 		int objMaxCoordinateNumber = cmd.getOptionValue("omcn") != null? Integer.parseInt(cmd.getOptionValue("omcn")) : 1000;
@@ -91,7 +95,7 @@ public class TesselationGeneralisationMain {
 
 		System.out.println("Launch generalisation");
 		CRSType crsType = GeoData.getCRSType(inFile);
-		units = TesselationGeneralisation.runGeneralisation(units, points, crsType, scaleDenominator, roundNb, maxCoordinatesNumber, objMaxCoordinateNumber);
+		units = TesselationGeneralisation.runGeneralisation(units, points, crsType, scaleDenominator, parallel, roundNb, maxCoordinatesNumber, objMaxCoordinateNumber);
 
 		System.out.println("Save output to "+outFile);
 		GeoData.save(units, outFile, GeoData.getCRS(inFile));
