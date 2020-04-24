@@ -2,7 +2,7 @@
 
 mkdir -p test_out
 
-for dataset in "chile" "bangladesh" "china_mainland" "indonesia" "panama" "philippines"
+for dataset in "indonesia" "chile" "bangladesh" "china_mainland" "panama" "philippines"
 do
 	for scaleM in "5" "10"
 	do

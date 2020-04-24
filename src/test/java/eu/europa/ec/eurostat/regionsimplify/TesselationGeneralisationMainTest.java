@@ -14,7 +14,7 @@ public class TesselationGeneralisationMainTest extends TestCase {
 
 	public void test() {
 		/*
-		for(String inFormat : new String[] {"shp"}) //TODO test gpkg, geojson ?
+		for(String inFormat : new String[] {"gpkg", "shp"}) //TODO test geojson ?
 			for(String outFormat : new String[] {"gpkg","shp","geojson"})
 				for(String s : new String[] {"1","5","10","50"})
 					for(String ds : new String[] {"chile", "bangladesh", "china_mainland", "indonesia", "panama", "philippines"}) {
