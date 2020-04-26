@@ -17,8 +17,9 @@ import org.apache.commons.cli.ParseException;
 import org.locationtech.jts.geom.Point;
 
 import eu.europa.ec.eurostat.jgiscotools.feature.Feature;
-import eu.europa.ec.eurostat.jgiscotools.io.GeoData;
+import eu.europa.ec.eurostat.jgiscotools.io.geo.GeoData;
 import eu.europa.ec.eurostat.jgiscotools.tesselationGeneralisation.TesselationGeneralisation;
+import eu.europa.ec.eurostat.jgiscotools.util.ProjectionUtil;
 import eu.europa.ec.eurostat.jgiscotools.util.ProjectionUtil.CRSType;
 
 /**
@@ -94,7 +95,7 @@ public class TesselationGeneralisationMain {
 		}
 
 		System.out.println("Launch generalisation");
-		CRSType crsType = GeoData.getCRSType(inFile);
+		CRSType crsType = ProjectionUtil.getCRSType(GeoData.getCRS(inFile));
 		units = TesselationGeneralisation.runGeneralisation(units, points, crsType, scaleDenominator, parallel, roundNb, maxCoordinatesNumber, objMaxCoordinateNumber);
 
 		System.out.println("Save output to "+outFile);
