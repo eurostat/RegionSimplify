@@ -13,7 +13,7 @@ public class TesselationGeneralisationMainTest extends TestCase {
 	}
 
 	public void test() {
-		/*
+/*
 		for(String inFormat : new String[] {"gpkg", "shp"}) //TODO test geojson ?
 			for(String outFormat : new String[] {"gpkg","shp","geojson"})
 				for(String s : new String[] {"1","5","10","50"})
@@ -29,7 +29,7 @@ public class TesselationGeneralisationMainTest extends TestCase {
 								"-o", "target/testout/"+ds+"_0_"+s+"_"+inFormat+"."+outFormat,
 								"-inb", "5",
 								"-s", s+"000000"});*/
-		//		}
+//				}
 
 	}
 

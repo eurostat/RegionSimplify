@@ -44,6 +44,7 @@
 		<maven.compiler.source>1.9</maven.compiler.source>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<jgiscotools.version>0.9.3</jgiscotools.version>
 	</properties>
 
 	<build>
@@ -105,8 +106,13 @@
 		</dependency>
 		<dependency>
 			<groupId>eu.europa.ec.eurostat</groupId>
-			<artifactId>jgiscotools-full</artifactId>
-			<version>0.9.2</version>
+			<artifactId>jgiscotools-regionsimplify</artifactId>
+			<version>${jgiscotools.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>eu.europa.ec.eurostat</groupId>
+			<artifactId>jgiscotools-geo-io</artifactId>
+			<version>${jgiscotools.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>commons-cli</groupId>
