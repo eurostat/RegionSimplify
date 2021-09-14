@@ -9,19 +9,16 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 
-import javax.measure.Unit;
-
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.DefaultParser;
 import org.apache.commons.cli.HelpFormatter;
 import org.apache.commons.cli.Option;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
-import org.geotools.referencing.util.CRSUtilities;
 import org.locationtech.jts.geom.Point;
-import org.opengis.referencing.crs.CoordinateReferenceSystem;
 
 import eu.europa.ec.eurostat.jgiscotools.feature.Feature;
+import eu.europa.ec.eurostat.jgiscotools.io.geo.CRSUtil;
 import eu.europa.ec.eurostat.jgiscotools.io.geo.GeoData;
 import eu.europa.ec.eurostat.jgiscotools.regionsimplify.TesselationGeneralisation;
 import eu.europa.ec.eurostat.jgiscotools.util.CRSType;
@@ -103,37 +100,13 @@ public class TesselationGeneralisationMain {
 		}
 
 		System.out.println("Launch generalisation");
-		CRSType crsType = getCRSType(GeoData.getCRS(inFile));
+		CRSType crsType = CRSUtil.getCRSType(GeoData.getCRS(inFile));
 		units = TesselationGeneralisation.runGeneralisation(units, pointsInd, crsType, scaleDenominator, parallel, roundNb, maxCoordinatesNumber, objMaxCoordinateNumber);
 
 		System.out.println("Save output to "+outFile);
 		GeoData.save(units, outFile, GeoData.getCRS(inFile));
 
 		System.out.println("End");
-	}
-
-
-
-
-	//TODO use projectionutil instead
-	private static CRSType getCRSType(Unit<?> unit) {
-		if(unit == null) return CRSType.UNKNOWN;
-		switch (unit.toString()) {
-		case "": return CRSType.UNKNOWN;
-		case "°": return CRSType.GEOG;
-		case "deg": return CRSType.GEOG;
-		case "dms": return CRSType.GEOG;
-		case "degree": return CRSType.GEOG;
-		case "m": return CRSType.CARTO;
-		default:
-			System.err.println("Unexpected unit of measure for projection: "+unit);
-			return CRSType.UNKNOWN;
-		}
-	}
-
-	//TODO use projectionutil instead
-	private static CRSType getCRSType(CoordinateReferenceSystem crs) {
-		return getCRSType(CRSUtilities.getUnit(crs.getCoordinateSystem()));
 	}
 
 }
